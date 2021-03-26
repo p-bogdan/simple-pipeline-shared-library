@@ -4,7 +4,8 @@ def call(Closure getVar) {
     stages {
       stage('one') {
         steps {
-          echo "This is Pipeline one"
+          echo 'Initialize terraform'
+          sh   "terraform init"
         }
       }
     }
