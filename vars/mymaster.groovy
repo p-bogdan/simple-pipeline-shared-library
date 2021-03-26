@@ -5,9 +5,6 @@ def call(Closure getVar) {
       stage('one') {
         steps {
           echo "This is Pipeline one"
-          script {
-            getVar()
-          }
         }
       }
     }
