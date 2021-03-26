@@ -15,6 +15,7 @@ def call(Closure getVar) {
               
         }
       }
+      getVar()
     }
   }
 }
