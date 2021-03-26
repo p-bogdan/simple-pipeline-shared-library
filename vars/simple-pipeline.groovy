@@ -1,6 +1,5 @@
 #!/usr/bin/env groovy
-def call(int buildNumber) {
-  if (buildNumber % 2 == 0) {
+def hello() {
     pipeline {
       agent any
       stages {
@@ -11,16 +10,4 @@ def call(int buildNumber) {
         }
       }
     }
-  } else {
-    pipeline {
-      agent any
-      stages {
-        stage('Step2') {
-          steps {
-            echo "Hello from the shared library"
-          }
-        }
-      }
-    }
-  }
-}
+  
