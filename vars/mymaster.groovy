@@ -11,8 +11,6 @@ def call(Closure getVar) {
         stage('Create GCP instance') {
             steps {
             echo 'Creating compute instance in GCP'
-            sh 'pwd'
-            sh 'ls -al'
             sh 'terraform apply --auto-approve'
               
         }
