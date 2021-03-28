@@ -1,4 +1,4 @@
-def call(Closure getVar) {
+def call(Closure createGCPinstance) {
   pipeline {
     agent any
     stages {
