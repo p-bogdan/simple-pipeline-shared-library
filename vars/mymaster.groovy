@@ -1,6 +1,6 @@
 def call(Closure getVar) {
-  pipeline {
-    agent any
+//  pipeline {
+//    agent any
     stages {
       stage('Initializing terraform') {
         steps {
@@ -17,4 +17,4 @@ def call(Closure getVar) {
       }
     }
   }
-}
+//}
