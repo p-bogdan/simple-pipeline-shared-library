@@ -15,7 +15,7 @@ def call(Closure createGCPinstance) {
               
         }
       }
-        /*stage('Destroy GCP instance') {
+        stage('Destroy GCP instance') {
             steps {
             timeout(time: 5, unit: 'MINUTES') {
             input(id: "Destroying terraform instance", message: "Are you sure to destroy ${params.project_name}?", ok: 'Destroy')
@@ -23,7 +23,7 @@ def call(Closure createGCPinstance) {
             sh 'terraform destroy -force'
             }
         }
-      }*/
+      }
     }
   }
 }
