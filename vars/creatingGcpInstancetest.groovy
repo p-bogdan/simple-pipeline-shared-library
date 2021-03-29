@@ -38,7 +38,7 @@ def call(Map config=[:], Closure body) {
       stage('Destroy GCP instance') {
             steps {
             script {  
-            if (config.destroy) {  
+            if (config.Destroy) {  
             timeout(time: 5, unit: 'MINUTES') {
             input(id: "Destroying terraform instance", message: "Are you sure to destroy ${params.project_name}?", ok: 'Destroy')
             echo 'Destroying GCP instance'
