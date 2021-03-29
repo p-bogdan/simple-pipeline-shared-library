@@ -35,7 +35,6 @@ def call(Closure creategcpinstance) {
               
         }
       }
-      creategcpinstance()
         
     }
   }
