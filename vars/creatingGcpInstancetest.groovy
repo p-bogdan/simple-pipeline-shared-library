@@ -9,11 +9,11 @@ def call(Map config=[:], Closure body) {
             echo 'Creating compute instance in GCP'
             sh 'terraform apply --auto-approve'
         } 
-        /*stage("Deploy") {
+        stage("Deploy") {
             if (config.deploy) {
                 sh "npm publish"
             }
-        }*/
+        }
         body()
     }
 }
