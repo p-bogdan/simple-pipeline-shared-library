@@ -35,9 +35,8 @@ def call(Map config=[:], Closure body) {
               
         }
       }
-      body()
-        /*stage('Destroy GCP instance') {
-            if (config.destroy_instance) {
+stage('Destroy GCP instance') {
+            if (config.destroy) {
             steps {
             timeout(time: 5, unit: 'MINUTES') {
             input(id: "Destroying terraform instance", message: "Are you sure to destroy ${params.project_name}?", ok: 'Destroy')
@@ -46,7 +45,10 @@ def call(Map config=[:], Closure body) {
             }
             }
         }
-      }*/
+      }
+
+      body()
+        
     }
   }
 }
