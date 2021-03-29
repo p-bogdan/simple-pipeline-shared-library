@@ -18,7 +18,7 @@
     }
 }*/
 
-def call(Map config=[:], Closure body) {
+def call(Closure body) {
   pipeline {
     agent any
     stages {
