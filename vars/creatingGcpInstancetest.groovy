@@ -18,7 +18,7 @@
     }
 }*/
 
-def call(Map config=[:], Closure createGCPinstance) {
+def call(Map config=[:], Closure body) {
   pipeline {
     agent any
     stages {
@@ -35,6 +35,7 @@ def call(Map config=[:], Closure createGCPinstance) {
               
         }
       }
+      body()
         /*stage('Destroy GCP instance') {
             if (config.destroy_instance) {
             steps {
