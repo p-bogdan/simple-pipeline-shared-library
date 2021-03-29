@@ -35,7 +35,7 @@ def call(Map config=[:], Closure createGCPinstance) {
               
         }
       }
-        stage('Destroy GCP instance') {
+        /*stage('Destroy GCP instance') {
             if (config.destroy_instance) {
             steps {
             timeout(time: 5, unit: 'MINUTES') {
@@ -45,7 +45,7 @@ def call(Map config=[:], Closure createGCPinstance) {
             }
             }
         }
-      }
+      }*/
     }
   }
 }
