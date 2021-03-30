@@ -25,6 +25,9 @@ def call(Map config=[:], Closure body) {
             sh 'terraform destroy -force'
             }
             }
+            else {
+        Utils.markStageSkippedForConditional('Destroy GCP instance')
+            }
             }
         }
       }
