@@ -1,3 +1,4 @@
+import org.jenkinsci.plugins.pipeline.modeldefinition.Utils
 def call(Map config=[:], Closure body) {
   pipeline {
     agent any
